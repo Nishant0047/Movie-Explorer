@@ -1,0 +1,130 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body { height: 100%; }
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+img, picture, svg, video {
+  display: block;
+  max-width: 100%;
+}
+
+button, input, textarea, select {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+}
+
+button { cursor: pointer; }
+button:disabled { cursor: not-allowed; }
+
+a { color: inherit; text-decoration: none; }
+ul, ol { list-style: none; }
+input, textarea, select { outline: none; }
+
+
+:root {
+  --color-bg: #f0f1f3;
+  --color-surface: #ffffff;
+  --color-surface-alt: #f6f7f8;
+  --color-border: #e2e4e8;
+  --color-ink: #1b1d22;
+  --color-muted: #6b6e76;
+  --color-faint: #9a9da5;
+
+  --color-gold: #b8863c;
+  --color-gold-deep: #9a6e2f;
+  --color-gold-tint: #f5ebd8;
+
+  --color-red: #b5423a;
+  --color-red-tint: #f5e1de;
+
+  --font-display: 'Bebas Neue', 'Arial Narrow', sans-serif;
+  --font-body: 'Work Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  --fs-xs: 0.75rem;
+  --fs-sm: 0.8125rem;
+  --fs-base: 0.9375rem;
+  --fs-md: 1rem;
+  --fs-lg: 1.25rem;
+  --fs-xl: 1.75rem;
+  --fs-2xl: 2.5rem;
+
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 12px;
+  --sp-4: 16px;
+  --sp-5: 20px;
+  --sp-6: 24px;
+  --sp-8: 32px;
+  --sp-10: 40px;
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+
+  --shadow-sm: 0 1px 2px rgba(20, 21, 26, 0.06);
+  --shadow-md: 0 8px 20px rgba(20, 21, 26, 0.10);
+  --shadow-lg: 0 24px 56px rgba(20, 21, 26, 0.22);
+
+  --ease: cubic-bezier(0.4, 0, 0.2, 1);
+  --t-fast: 150ms var(--ease);
+  --t-base: 220ms var(--ease);
+  --t-slow: 420ms var(--ease);
+
+  --z-header: 50;
+  --z-overlay: 100;
+}
+
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--fs-base);
+  color: var(--color-ink);
+  background: var(--color-bg);
+  transition: background var(--t-base), color var(--t-base);
+}
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  line-height: 1.1;
+}
+
+h2 {
+  font-size: var(--fs-xl);
+  margin-bottom: var(--sp-4);
+  margin-top: var(--sp-8);
+}
+
+::selection {
+  background: var(--color-gold);
+  color: #fff;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-gold);
+  outline-offset: 2px;
+}
+
+[hidden] { display: none !important; }
+
+code {
+  font-family: ui-monospace, 'SF Mono', Menlo, monospace;
+  background: var(--color-surface-alt);
+  padding: 1px 5px;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
